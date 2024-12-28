@@ -1,12 +1,12 @@
 #we are going to build a coffe shop
 def orderlist():
-    print("\n                ORDER LIST                   ")
-    print("\n1. Idly      - 5$         2. Idlysambar    - 6$")
-    print("\n3. Gare      - 7$         4. Dosa          - 6$")
-    print("\n5. Bajji     - 8$         6. Puri          - 10$")
-    print("\n7. Onion Dosa- 10$        8. Masala Dosa   - 12$")
-    print("\n***            Choose your Order             ***")
+    print("\n                               ORDER LIST                   ")
+    print("\n              1. Idly      - 5$         2. Idlysambar    - 6$")
+    print("\n              3. Gare      - 7$         4. Dosa          - 6$")
+    print("\n              5. Bajji     - 8$         6. Puri          - 10$")
+    print("\n              7. Onion Dosa- 10$        8. Masala Dosa   - 12$")
     total = 0
+    total_items = 0
     additem = input('Add items (y/n) : ')
     while additem.upper() == 'Y':
         a = int(input("Enter your choice : "))
@@ -14,20 +14,71 @@ def orderlist():
             acost = 5
             print(f'Idly  - {acost}$')
             total += acost
-            print(f'Total - {total}$')
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
             additem = input('add another (y/n) : ')
         elif a == 2:
             bcost = 6
             print(f'Idlysambar - {bcost}$')
             total += bcost
-            print(f'Total      - {total}$')
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 3:
+            ccost = 7
+            print(f'Gare - {ccost}$')
+            total += ccost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 4:
+            dcost = 6
+            print(f'Dosa - {dcost}$')
+            total += dcost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 5:
+            ecost = 8
+            print(f'Bajji - {ecost}$')
+            total += ecost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 6:
+            fcost = 10
+            print(f'Puri - {fcost}$')
+            total += fcost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 7:
+            gcost = 10
+            print(f'Onion Dosa - {gcost}$')
+            total += gcost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
+            additem = input('add another (y/n) : ')
+        elif a == 8:
+            hcost = 12
+            print(f'Masala Dosa - {hcost}$')
+            total += hcost
+            total_items += 1
+            print(f'Total items - {total_items}  Cost - {total}$')
             additem = input('add another (y/n) : ')
         elif additem.upper == 'N':
             break
         elif additem.upper() != 'Y' and additem.upper() != 'N' :
             print("Choose correctly")
             additem = 'y'
-    print(f"Yout total is {total}$")
+        elif type(a) != int:
+            print('enter correct option ')
+            additem = 'y'
+        else:
+            print('enter the correct option ')
+            additem = 'y'
+        
+    print(f"Your total is {total}$ items - {total_items}")
 
 
 def orderdenaid():
@@ -42,12 +93,12 @@ def order():
 
 def welcome():
     print(f"Hello SaiTeja🙋🏻... ")
-    print("\n***   WELCOME TO SRI BALAJI FAST FOODS   *** ")
-    print("\n                ORDER LIST                   ")
-    print("\n1. Idly      - 5$         2. Idlysambar    - 6$")
-    print("\n3. Gare      - 7$         4. Dosa          - 6$")
-    print("\n5. Bajji     - 8$         6. Puri          - 10$")
-    print("\n7. Onion Dosa- 10$        8. Masala Dosa   - 12$")
+    print("\n               ***   WELCOME TO SRI BALAJI FAST FOODS   *** ")
+    print("\n                               ORDER LIST                   ")
+    print("\n              1. Idly      - 5$         2. Idlysambar    - 6$")
+    print("\n              3. Gare      - 7$         4. Dosa          - 6$")
+    print("\n              5. Bajji     - 8$         6. Puri          - 10$")
+    print("\n              7. Onion Dosa- 10$        8. Masala Dosa   - 12$")
     order()
 def login():
     global username 
