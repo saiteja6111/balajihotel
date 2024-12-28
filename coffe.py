@@ -24,14 +24,12 @@ def orderlist():
             additem = input('add another (y/n) : ')
         elif additem.upper == 'N':
             break
-        elif additem.upper() != 'y':
+        elif additem.upper() != 'Y' and additem.upper() != 'N' :
             print("Choose correctly")
             additem = 'y'
     print(f"Yout total is {total}$")
 
 
-
-    
 def orderdenaid():
     print('\n     Thank You...     ')
     exit()
